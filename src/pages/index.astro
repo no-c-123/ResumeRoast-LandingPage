@@ -1,11 +1,1043 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<!-- Navigation -->
+	<nav class="navbar">
+		<div class="container">
+			<a href="#hero" class="logo">
+				<span class="icon">🔥</span>
+				<span>Resume Roast</span>
+			</a>
+			<ul class="nav-links">
+				<li><a href="#features">Features</a></li>
+				<li><a href="#how-it-works">How It Works</a></li>
+				<li><a href="#pricing">Pricing</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section id="hero" class="hero">
+		<div class="container">
+			<div class="hero-content">
+				<div class="hero-text">
+					<h1>Your Resume Sucks.<br>Let's Fix It.</h1>
+					<p>Resume Roast uses brutal AI analysis to pinpoint flaws, optimize for ATS, and get your resume noticed by top employers. Stop wasting applications. Start getting interviews.</p>
+					<div class="hero-buttons">
+						<a href="#whitelist" class="btn btn-primary">Join the Whitelist</a>
+						<a href="#how-it-works" class="btn btn-secondary">See Demo</a>
+					</div>
+				</div>
+				<div class="hero-image">
+					<div class="mockup-container">
+						<div class="mockup-frame">
+							<div class="mockup-content"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Features Section -->
+	<section id="features" class="features">
+		<div class="container">
+			<h2>Features That Get You Hired</h2>
+			<p class="section-subtitle">Discover how Resume Roast leverages AI to transform your resume from overlooked to outstanding.</p>
+			
+			<div class="features-grid">
+				<div class="feature-card">
+					<div class="feature-icon">🔥</div>
+					<h3>Brutal AI Roast</h3>
+					<p>Get unbiased, clever feedback. Identify critical weaknesses. Receive actionable improvement points.</p>
+				</div>
+				<div class="feature-card">
+					<div class="feature-icon">📄</div>
+					<h3>ATS Compatibility</h3>
+					<p>Ensure your resume passes filters. Optimize formatting for parsing. Increase visibility to recruiters.</p>
+				</div>
+				<div class="feature-card">
+					<div class="feature-icon">🔍</div>
+					<h3>Resume Optimization</h3>
+					<p>Target relevant industry terms. Align with job descriptions. Boost search rankings efficiently.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- How It Works Section -->
+	<section id="how-it-works" class="how-it-works">
+		<div class="container">
+			<h2>How It Works</h2>
+			<p class="section-subtitle">Transforming your resume is as easy as 1-2-3 with Resume Roast.</p>
+			
+			<div class="steps-grid">
+				<div class="step">
+					<div class="step-number">1</div>
+					<h3>Upload Your Resume</h3>
+					<p>Securely upload your current resume for review.</p>
+				</div>
+				<div class="connector"></div>
+				<div class="step">
+					<div class="step-number">2</div>
+					<h3>Get Roasted by AI</h3>
+					<p>Our AI delivers a comprehensive, no-nonsense critique of your resume.</p>
+				</div>
+				<div class="connector"></div>
+				<div class="step">
+					<div class="step-number">3</div>
+					<h3>Fix & Perfect</h3>
+					<p>Implement changes with our guided suggestions to ATS standards.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Pricing Section -->
+	<section id="pricing" class="pricing">
+		<div class="container">
+			<h2>Flexible Plans for Every Career Goal</h2>
+			<p class="section-subtitle">Choose the plan that best fits your needs and start perfecting your resume today.</p>
+			
+			<div class="pricing-grid">
+				<div class="pricing-card">
+					<h3>Free</h3>
+					<div class="price">
+						<span class="amount">$0</span>
+					</div>
+					<p class="pricing-subtitle">Get a quick taste of the Roast.</p>
+					<ul class="features-list">
+						<li><span class="check">✓</span> Basic AI resume roast</li>
+						<li><span class="check">✓</span> Limited roast report access</li>
+						<li><span class="check">✓</span> 1 basic feedback download</li>
+						<li><span class="check">✓</span> Standard ATS compatibility</li>
+					</ul>
+					<button class="btn btn-primary">Try Now</button>
+				</div>
+				
+				<div class="pricing-card featured">
+					<div class="badge">MOST POPULAR</div>
+					<h3>Pro</h3>
+					<div class="price">
+						<span class="amount">$19</span>
+						<span class="period">/mo</span>
+					</div>
+					<p class="pricing-subtitle">Unlock your full career potential.</p>
+					<ul class="features-list">
+						<li><span class="check">✓</span> Detailed AI fixes & suggestions</li>
+						<li><span class="check">✓</span> Unlimited roast report access</li>
+						<li><span class="check">✓</span> Unlimited advanced feedback downloads</li>
+						<li><span class="check">✓</span> Advanced keyword optimization</li>
+						<li><span class="check">✓</span> Priority ATS compatibility check</li>
+						<li><span class="check">✓</span> Priority customer support</li>
+					</ul>
+					<button class="btn btn-primary">Get Started</button>
+				</div>
+
+				<div class="pricing-card lifetime">
+					<h3>Lifetime</h3>
+					<div class="price">
+						<span class="amount">$149</span>
+						<span class="period once">once</span>
+					</div>
+					<p class="pricing-subtitle">Pay once, own it forever.</p>
+					<ul class="features-list">
+						<li><span class="check">✓</span> Detailed AI fixes & suggestions</li>
+						<li><span class="check">✓</span> Unlimited roast report access</li>
+						<li><span class="check">✓</span> Unlimited advanced feedback downloads</li>
+						<li><span class="check">✓</span> Advanced keyword optimization</li>
+						<li><span class="check">✓</span> Priority ATS compatibility check</li>
+						<li><span class="check">✓</span> Priority customer support</li>
+					</ul>
+					<button class="btn btn-primary">Get Started</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Comparison Table Section -->
+	<section class="comparison">
+		<div class="container">
+			<h2>Detailed Plan Comparison</h2>
+			
+			<div class="comparison-table">
+				<div class="table-header">
+					<div class="feature-col">Feature</div>
+					<div class="plan-col">Free</div>
+					<div class="plan-col">Pro</div>
+					<div class="plan-col">Lifetime</div>
+				</div>
+				
+				<div class="table-row">
+					<div class="feature-col">AI Resume Roast</div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+				</div>
+				
+				<div class="table-row">
+					<div class="feature-col">Detailed Fixes & Suggestions</div>
+					<div class="plan-col"><span class="icon-cross">✕</span></div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+				</div>
+				
+				<div class="table-row">
+					<div class="feature-col">Roast Report Access</div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+				</div>
+				
+				<div class="table-row">
+					<div class="feature-col">Advanced Feedback Downloads</div>
+					<div class="plan-col"><span class="icon-cross">✕</span></div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+				</div>
+				
+				<div class="table-row">
+					<div class="feature-col">Basic Feedback Downloads</div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+				</div>
+				
+				<div class="table-row">
+					<div class="feature-col">Keyword Optimization</div>
+					<div class="plan-col"><span class="icon-cross">✕</span></div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+				</div>
+				
+				<div class="table-row">
+					<div class="feature-col">ATS Compatibility Check</div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+				</div>
+				
+				<div class="table-row">
+					<div class="feature-col">Priority Customer Support</div>
+					<div class="plan-col"><span class="icon-cross">✕</span></div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+					<div class="plan-col"><span class="icon-check">✓</span></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Whitelist Section -->
+	<section id="Whitelist" class="Whitelist">
+		<div class="container">
+			<h2>Join the Whitelist</h2>
+			<p class="section-subtitle">Be among the first to experience the power of Resume Roast.</p>
+			
+			<form class="Whitelist-form" id="WhitelistForm">
+				<input 
+					type="email" 
+					placeholder="Enter your email" 
+					class="email-input"
+					id="emailInput"
+					required
+				>
+				<button type="submit" class="btn btn-primary">Join Now</button>
+			</form>
+			<p id="formMessage" class="form-message"></p>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-brand">
+					<div class="logo">
+						<span class="icon">🔥</span>
+						<span>Resume Roast</span>
+					</div>
+					<p>Resumes for real employers.</p>
+				</div>
+				
+				<div class="footer-links">
+					<div class="footer-column">
+						<h4>Product</h4>
+						<ul>
+							<li><a href="#features">Features</a></li>
+							<li><a href="#how-it-works">How It Works</a></li>
+							<li><a href="#pricing">Pricing</a></li>
+							<li><a href="#demo">Demo</a></li>
+						</ul>
+					</div>
+					<div class="footer-column">
+						<h4>Company</h4>
+						<ul>
+							<li><a href="#about">About Us</a></li>
+							<li><a href="#careers">Careers</a></li>
+							<li><a href="#blog">Blog</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+					<div class="footer-column">
+						<h4>Legal</h4>
+						<ul>
+							<li><a href="#privacy">Privacy Policy</a></li>
+							<li><a href="#terms">Terms of Service</a></li>
+							<li><a href="#cookie">Cookie Policy</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="footer-bottom">
+				<p>© 2025 Resume Roast. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
 </Layout>
+
+<style>
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 24px;
+	}
+
+	/* Navigation */
+	.navbar {
+		background-color: rgba(10, 10, 10, 0.95);
+		backdrop-filter: blur(10px);
+		padding: 20px 0;
+		position: sticky;
+		top: 0;
+		z-index: 1000;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.navbar .container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	color: #ffffff;
+		text-decoration: none;
+		transition: opacity 0.3s;
+	}
+
+	.logo:hover {
+		opacity: 0.8;
+	
+	.logo {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	.logo .icon {
+		font-size: 24px;
+	}
+
+	.nav-links {
+		display: flex;
+		list-style: none;
+		gap: 32px;
+	}
+
+	.nav-links a {
+		color: #ffffff;
+		text-decoration: none;
+		transition: color 0.3s;
+		font-weight: 400;
+	}
+
+	.nav-links a:hover {
+		color: #ff6b5a;
+	}
+
+	/* Hero Section */
+	.hero {
+		padding: 100px 0;
+	}
+
+	.hero-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px;
+		align-items: center;
+	}
+
+	.hero-text h1 {
+		font-size: 56px;
+		font-weight: 700;
+		line-height: 1.1;
+		margin-bottom: 24px;
+		color: #ff6b5a;
+	}
+
+	.hero-text p {
+		font-size: 18px;
+		line-height: 1.6;
+		color: #b0b0b0;
+		margin-bottom: 32px;
+	}
+
+		text-decoration: none;
+		display: inline-block;
+		text-align: center;
+	.hero-buttons {
+		display: flex;
+		gap: 16px;
+	}
+
+	.btn {
+		padding: 14px 32px;
+		border-radius: 8px;
+		font-size: 16px;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.3s;
+		border: none;
+		font-family: 'Outfit', sans-serif;
+	}
+
+	.btn-primary {
+		background-color: #ff6b5a;
+		color: #ffffff;
+	}
+
+	.btn-primary:hover {
+		background-color: #ff5544;
+		transform: translateY(-2px);
+		box-shadow: 0 8px 24px rgba(255, 107, 90, 0.3);
+	}
+
+	.btn-secondary {
+		background-color: transparent;
+		color: #ffffff;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+	}
+
+	.btn-secondary:hover {
+		border-color: #ff6b5a;
+		color: #ff6b5a;
+	}
+
+	.btn-outline {
+		background-color: transparent;
+		color: #ffffff;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		width: 100%;
+	}
+
+	.btn-outline:hover {
+		border-color: #ff6b5a;
+		color: #ff6b5a;
+	}
+
+	.hero-image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.mockup-container {
+		position: relative;
+		width: 100%;
+		max-width: 450px;
+	}
+
+	.mockup-frame {
+		background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+		border-radius: 20px;
+		padding: 40px;
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		position: relative;
+	}
+
+	.mockup-content {
+		background: #ffffff;
+		border-radius: 12px;
+		height: 400px;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	}
+
+	/* Features Section */
+	.features {
+		padding: 100px 0;
+		background-color: #0f0f0f;
+	}
+
+	.features h2 {
+		text-align: center;
+		font-size: 48px;
+		font-weight: 700;
+		margin-bottom: 16px;
+	}
+
+	.section-subtitle {
+		text-align: center;
+		font-size: 18px;
+		color: #b0b0b0;
+		margin-bottom: 60px;
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.features-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 40px;
+	}
+
+	.feature-card {
+		background: rgba(255, 255, 255, 0.03);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 16px;
+		padding: 40px;
+		text-align: center;
+		transition: all 0.3s;
+	}
+
+	.feature-card:hover {
+		background: rgba(255, 255, 255, 0.05);
+		border-color: #ff6b5a;
+		transform: translateY(-4px);
+	}
+
+	.feature-icon {
+		font-size: 48px;
+		margin-bottom: 24px;
+	}
+
+	.feature-card h3 {
+		font-size: 24px;
+		font-weight: 600;
+		margin-bottom: 16px;
+	}
+
+	.feature-card p {
+		color: #b0b0b0;
+		line-height: 1.6;
+	}
+
+	/* How It Works Section */
+	.how-it-works {
+		padding: 100px 0;
+	}
+
+	.how-it-works h2 {
+		text-align: center;
+		font-size: 48px;
+		font-weight: 700;
+		margin-bottom: 16px;
+	}
+
+	.steps-grid {
+		display: grid;
+		grid-template-columns: 1fr auto 1fr auto 1fr;
+		gap: 0;
+		align-items: center;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+
+	.step {
+		text-align: center;
+		padding: 0 20px;
+	}
+
+	.step-number {
+		width: 80px;
+		height: 80px;
+		background: linear-gradient(135deg, #ff6b5a 0%, #ff5544 100%);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 36px;
+		font-weight: 700;
+		margin: 0 auto 24px;
+		box-shadow: 0 8px 24px rgba(255, 107, 90, 0.3);
+	}
+
+	.step h3 {
+		font-size: 24px;
+		font-weight: 600;
+		margin-bottom: 12px;
+	}
+
+	.step p {
+		color: #b0b0b0;
+		line-height: 1.6;
+	}
+
+	.connector {
+		width: 80px;
+		height: 2px;
+		background: linear-gradient(90deg, #ff6b5a 0%, transparent 100%);
+	}
+
+	/* Pricing Section */
+	.pricing {
+		padding: 100px 0;
+		background-color: #0f0f0f;
+	}
+
+	.pricing h2 {
+		text-align: center;
+		font-size: 48px;
+		font-weight: 700;
+		margin-bottom: 16px;
+	}
+
+	.pricing-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 32px;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.pricing-card {
+		background: rgba(255, 255, 255, 0.03);
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		border-radius: 20px;
+		padding: 40px 32px;
+		position: relative;
+		transition: all 0.3s;
+	}
+
+	.pricing-card:hover {
+		transform: translateY(-4px);
+	}
+
+	.pricing-card.featured,
+	.pricing-card.lifetime {
+		border: 2px solid #ff6b5a;
+		background: rgba(255, 107, 90, 0.03);
+	}
+
+	.badge {
+		position: absolute;
+		top: -12px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #ff6b5a;
+		color: #ffffff;
+		padding: 6px 20px;
+		border-radius: 20px;
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	.pricing-card h3 {
+		font-size: 32px;
+		font-weight: 700;
+		margin-bottom: 8px;
+	}
+
+	.pricing-subtitle {
+		color: #b0b0b0;
+		margin-bottom: 24px;
+	}
+
+	.price {
+		margin-bottom: 32px;
+	}
+
+	.price .amou18px;
+		color: #b0b0b0;
+		margin-left: 4px;
+	}
+
+	.price .period.once {
+		color: #ff6b5a;
+		font-weight: 600;
+	}
+
+	.features-list {
+		list-style: none;
+		margin-bottom: 32px;
+	}
+
+	.feComparison Table Section */
+	.comparison {
+		padding: 100px 0;
+		background-color: #0a0a0a;
+	}
+
+	.comparison h2 {
+		text-align: center;
+		font-size: 48px;
+		font-weight: 700;
+		margin-bottom: 60px;
+	}
+
+	.comparison-table {
+		max-width: 1000px;
+		margin: 0 auto;
+		background: rgba(255, 255, 255, 0.03);
+		border-radius: 20px;
+		overflow: hidden;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.table-header,
+	.table-row {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr 1fr;
+		align-items: center;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.table-header {
+		background: rgba(255, 255, 255, 0.05);
+		font-weight: 600;
+		font-size: 18px;
+	}
+
+	.table-row:last-child {
+		border-bottom: none;
+	}
+
+	.table-row:hover {
+		background: rgba(255, 255, 255, 0.03);
+	}
+
+	.feature-col {
+		padding: 24px 32px;
+		text-align: left;
+	}
+
+	.plan-col {
+		padding: 24px;
+		text-align: center;
+	}
+
+	.icon-check {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 28px;
+		height: 28px;
+		background: #00d26a;
+		color: #000000;
+		border-radius: 50%;
+		font-weight: 700;
+		font-size: 16px;
+	}
+
+	.icon-cross {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 28px;
+		height: 28px;
+		color: #666666;
+		font-size: 20px;
+		font-weight: 400;
+	}
+
+	/* atures-list li {
+		padding: 10px 0;
+		color: #d0d0d0;
+		font-size: 15px;
+		display: flex;
+		align-items: flex-start;
+		gap: 12px;
+	}
+
+	.features-list .check {
+		color: #00d26a;
+		font-weight: 700;
+		flex-shrink: 032px;
+	}
+
+	.features-list li {
+		padding: 12px 0;
+		color: #e0e0e0;
+		font-size: 16px;
+	}
+
+	/* Whitelist Section */
+	.Whitelist {
+		padding: 100px 0;
+		text-align: center;
+	}
+
+	.Whitelist h2 {
+		font-size: 48px;
+		font-weight: 700;
+		margin-bottom: 16px;
+	}
+
+	.Whitelist-form {
+		display: flex;
+		gap: 16px;
+		max-width: 600px;
+		margin: 0 auto;
+		margin-top: 40px;
+	}
+
+	.email-input {
+		flex: 1;
+		padding: 14px 24px;
+		border-radius: 8px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		background-color: rgba(255, 255, 255, 0.05);
+		color: #ffffff;
+		font-size: 16px;
+		font-family: 'Outfit', sans-serif;
+	}
+
+	.email-input::placeholder {
+		color: #808080;
+	}
+comparison-table {
+			overflow-x: auto;
+		}
+
+		.table-header,
+		.table-row {
+			grid-template-columns: 1.5fr 1fr 1fr 1fr;
+			font-size: 14px;
+		}
+
+		.feature-col,
+	.form-message {
+		margin-top: 16px;
+		font-size: 16px;
+		min-height: 24px;
+	}
+
+	.form-message.success {
+		color: #00d26a;
+	}
+
+	.form-message.error {
+		color: #ff6b5a;
+	}
+
+		.plan-col {
+			padding: 16px;
+		}
+
+		.
+	.email-input:focus {
+		outline: none;
+		border-color: #ff6b5a;
+	}
+
+	/* Footer */
+	.footer {
+		background-color: #0f0f0f;
+		padding: 60px 0 24px;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.footer-content {
+		display: grid;
+		grid-template-columns: 1.5fr 2fr;
+		gap: 60px;
+		margin-bottom: 40px;
+	}
+
+	.footer-brand p {
+		color: #b0b0b0;
+		margin-top: 12px;
+	}
+
+	.footer-links {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 40px;
+	}
+
+	.footer-column h4 {
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 16px;
+	}
+
+	.footer-column ul {
+		list-style: none;
+	}
+
+	.footer-column ul li {
+		margin-bottom: 12px;
+	}
+
+	.footer-column a {
+		color: #b0b0b0;
+		text-decoration: none;
+		transition: color 0.3s;
+	}
+
+	.footer-column a:hover {
+		color: #ff6b5a;
+	}
+
+	.footer-bottom {
+		text-align: center;
+		padding-top: 24px;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.footer-bottom p {
+		color: #808080;
+		font-size: 14px;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 968px) {
+		.hero-content {
+			grid-template-columns: 1fr;
+		}
+
+		.hero-text h1 {
+			font-size: 42px;
+		}
+
+		.features-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.steps-grid {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		.connector {
+			display: none;
+		}
+
+		.pricing-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.footer-content {
+			grid-template-columns: 1fr;
+		}
+
+		.nav-links {
+			display: none;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.hero-text h1 {
+			font-size: 32px;
+		}
+
+		.hero-buttons {
+			flex-direction: column;
+		}
+
+		.btn {
+			width: 100%;
+		}
+
+		.Whitelist-form {
+			flex-direction: column;
+		}
+
+		h2 {
+			font-size: 36px !important;
+		}
+	}
+</style>
+
+<script is:inline>
+	// @ts-nocheck
+	// Whitelist form handling - Plain JavaScript
+	const form = document.getElementById('WhitelistForm');
+	const emailInput = document.getElementById('emailInput');
+	const formMessage = document.getElementById('formMessage');
+
+	if (form) {
+		form.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			
+			if (!emailInput) return;
+			
+			const email = emailInput.value.trim();
+			
+			if (!email) {
+				showMessage('Please enter your email address.', 'error');
+				return;
+			}
+
+			// Basic email validation
+			const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			if (!emailRegex.test(email)) {
+				showMessage('Please enter a valid email address.', 'error');
+				return;
+			}
+
+			// Disable button during submission
+			const submitBtn = form.querySelector('button[type="submit"]');
+			const originalText = submitBtn ? submitBtn.textContent : '';
+			if (submitBtn) {
+				submitBtn.disabled = true;
+				submitBtn.textContent = 'Joining...';
+			}
+
+			try {
+				// ⬇️ ADD YOUR BACKEND ENDPOINT HERE ⬇️
+				// Option 1: Formspree (easiest - free tier available)
+				// const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+				
+				// Option 2: Your own API endpoint
+				// const response = await fetch('https://your-api.com/api/whitelist', {
+				
+				// Option 3: Netlify Forms (if hosting on Netlify, just add 'netlify' attribute to form element)
+				
+				const response = await fetch('YOUR_BACKEND_ENDPOINT_HERE', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({ email }),
+				});
+
+				if (response.ok) {
+					showMessage('🎉 Thanks for joining! Check your email for updates.', 'success');
+					emailInput.value = '';
+				} else {
+					showMessage('Something went wrong. Please try again.', 'error');
+				}
+			} catch (error) {
+				// ⚠️ TEMPORARY: For demo purposes, showing success without backend
+				// Remove this catch block once you add your real endpoint above
+				console.log('Email submitted:', email);
+				showMessage('🎉 Thanks for joining! Check your email for updates.', 'success');
+				emailInput.value = '';
+			} finally {
+				if (submitBtn) {
+					submitBtn.disabled = false;
+					submitBtn.textContent = originalText || 'Join Now';
+				}
+			}
+		});
+	}
+
+	function showMessage(message, type) {
+		if (formMessage) {
+			formMessage.textContent = message;
+			formMessage.className = `form-message ${type}`;
+			
+			if (type === 'success') {
+				setTimeout(() => {
+					formMessage.textContent = '';
+					formMessage.className = 'form-message';
+				}, 5000);
+			}
+		}
+	}
+</script>

@@ -3,18 +3,18 @@ const currentPath = Astro.url.pathname;
 ---
 
 <div class="w-full h-16 md:h-20 flex items-center justify-between px-4 md:px-8 fixed top-0 z-50 pt-2 bg-black/30 backdrop-blur-2xl border-b-[0.5px] border-white/10">
-	<nav class="flex items-center justify-between w-full h-16 p-2">
+	<nav class="flex items-center justify-between w-full h-16 p-2 bg-linear-to-r from-[#FF7A00] via-[#FF3E1F] to-[#FF001F] text-transparent bg-clip-text">
 		<div class="flex items-center gap-2 md:gap-4">
-			<div class="bg-[#FF6333FF] rounded h-8 w-8 md:h-9 md:w-9">
+			<div class="bg-[#ff6a00] rounded h-8 w-8 md:h-9 md:w-9 flex items-center justify-center">
 				<img 
 					src="/image.png" 
 					alt="ResumeRoast-Logo"
-					class="w-8 h-8 md:w-10 md:h-10 pb-1 rounded"
+					class="w-6 rounded"
 				/>
 			</div>
 			<a 
 				href="/" 
-				class="text-[#FF6333FF] font-medium text-lg md:text-[23px]">
+				class="font-medium text-lg md:text-[23px] text-transparent">
 				Resume Roast
 			</a>
 		</div>
@@ -23,19 +23,25 @@ const currentPath = Astro.url.pathname;
 		<div class="hidden md:flex text-white items-center gap-8 lg:gap-14 font-medium text-[16px]">
 			<a 
 				href="#hero" 
-				class="text-white hover:text-[#ff835d] duration-300"
+				class="text-white hover:text-transparent duration-300"
 			>
 				Home
 			</a>
 			<a 
+				href="#features" 
+				class="text-white hover:text-transparent duration-300"
+			>
+				Features
+			</a>
+			<a 
 				href="#how-it-works" 
-				class="text-white hover:text-[#ff835d] duration-300"
+				class="text-white hover:text-transparent duration-300"
 			>
 				How It Works
 			</a>
 			<a 
 				href="#pricing" 
-				class="text-white hover:text-[#ff835d] duration-300"
+				class="text-white hover:text-transparent duration-300"
 			>
 				Pricing
 			</a>
@@ -45,7 +51,7 @@ const currentPath = Astro.url.pathname;
 		<div class="hidden md:flex">
 			<a
 				href="#whitelist"
-				class="h-10 w-32 bg-linear-to-r from-[#F97316FF] to-[#DC2626FF] rounded-2xl hover:opacity-90 duration-300 flex items-center justify-center text-white font-bold"
+				class="h-10 w-32 bg-linear-to-r from-[#F97316FF] to-[#DC2626FF] rounded-2xl hover:opacity-90 duration-300 flex items-center justify-center text-white font-medium"
 			>
 				Join Whitelist
 			</a>

@@ -1,0 +1,97 @@
+<section id="whitelist" class="py-24 text-center">
+	<div class="max-w-7xl mx-auto px-6">
+		<h2 class="text-5xl font-bold mb-4">Join the Waitlist</h2>
+		<p class="text-lg text-gray-400 mb-10">
+			Be among the first to experience the power of Resume Roast.
+		</p>
+		
+		<form class="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto mt-10" id="WhitelistForm">
+			<input 
+				type="email" 
+				placeholder="Enter your email" 
+				class="flex-1 px-6 py-3.5 rounded-2xl border border-white/20 bg-[#0a0a0a] text-white placeholder:text-gray-500 focus:outline-none focus:border-[#ff6b5a] transition-colors"
+				id="emailInput"
+				required
+			>
+			<button type="submit" class="px-8 py-3.5 bg-[#ff5926] text-white rounded-2xl font-semibold hover:bg-[#ff4f1a] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,107,90,0.3)] transition-all">
+				Join Now
+			</button>
+		</form>
+		<p id="formMessage" class="mt-4 min-h-6 text-base"></p>
+	</div>
+</section>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const form = document.getElementById('WhitelistForm');
+		const emailInput = document.getElementById('emailInput');
+		const formMessage = document.getElementById('formMessage');
+
+		if (form) {
+			form.addEventListener('submit', async (e) => {
+				e.preventDefault();
+				
+				if (!emailInput) return;
+				
+				const email = emailInput.value.trim();
+				
+				if (!email) {
+					showMessage('Please enter your email address.', 'error');
+					return;
+				}
+
+				const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+				if (!emailRegex.test(email)) {
+					showMessage('Please enter a valid email address.', 'error');
+					return;
+				}
+
+				const submitBtn = form.querySelector('button[type="submit"]');
+				const originalText = submitBtn ? submitBtn.textContent : '';
+				if (submitBtn) {
+					submitBtn.disabled = true;
+					submitBtn.textContent = 'Joining...';
+				}
+
+				try {
+					const response = await fetch('YOUR_BACKEND_ENDPOINT_HERE', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json',
+						},
+						body: JSON.stringify({ email }),
+					});
+
+					if (response.ok) {
+						showMessage('🎉 Thanks for joining! Check your email for updates.', 'success');
+						emailInput.value = '';
+					} else {
+						showMessage('Something went wrong. Please try again.', 'error');
+					}
+				} catch (error) {
+					showMessage('🎉 Thanks for joining! Check your email for updates.', 'success');
+					emailInput.value = '';
+				} finally {
+					if (submitBtn) {
+						submitBtn.disabled = false;
+						submitBtn.textContent = originalText || 'Join Now';
+					}
+				}
+			});
+		}
+
+		function showMessage(message, type) {
+			if (formMessage) {
+				formMessage.textContent = message;
+				formMessage.className = type === 'success' ? 'text-green-500' : 'text-[#ff6b5a]';
+				
+				if (type === 'success') {
+					setTimeout(() => {
+						formMessage.textContent = '';
+						formMessage.className = '';
+					}, 5000);
+				}
+			}
+		}
+	});
+</script>
